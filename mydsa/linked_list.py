@@ -1,6 +1,9 @@
+# standard imports
 from __future__ import annotations
 from typing import Any
-from nodes import Node
+
+# local imports 
+from mydsa.nodes import Node
 
 
 class LinkedList:
@@ -32,7 +35,7 @@ class LinkedList:
         return ' -> '.join(string_list)
 
     def remove_node(self, value_to_remove: Any) -> None:
-        """Remove node(s) that contains given value."""
+        """Remove node that contains given value."""
         current_node = self.head_node
         if current_node.value == value_to_remove:  # if head_node contains value to remove
             self._head_node = current_node.next_node

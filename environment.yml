@@ -1,0 +1,11 @@
+name: dsa_env
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - pip
+  - python=3.10
+  - pylint
+  - pytest
+  - pip:
+    - -e .
