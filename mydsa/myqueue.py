@@ -1,18 +1,26 @@
-from nodes import Node
+# standard import
 from typing import Any
+
+# local imports
+from mydsa.nodes import Node
+
 
 
 class Queue:
+    """This data structure is composed of nodes using 
+    a first in first out (FIFO) protocol. Think of how 
+    customers are served waiting in line at a grocery store.
+    """
 
     def __init__(self):
-        self._head: Node = None
-        self._tail: Node = None
+        self._head_node: Node = None
+        self._tail_node: Node = None
 
     def is_empty(self) -> bool:
-        return self._head == None
+        return self._head_node == None
 
     def peek(self) -> Any:
-        return self._head.value
+        return self._head_node.value
 
     def enqueue(self, value) -> None:
         """Add node """
@@ -29,8 +37,8 @@ class Queue:
             self._tail_node = new_head
 
     def dequeue(self) -> Any:
-        value = self._head.value
-        self._head = self._head.next_node
+        value = self._head_node.value
+        self._head_node = self._head_node.next_node
         if self._head_node == None:
             self._tail_node = None
 

@@ -25,3 +25,6 @@ class Stack:
             return item_to_remove.value
         else:
             print('This stack is totally empty.')
+
+    def has_space(self):
+        return self._limit > self._size
