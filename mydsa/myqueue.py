@@ -5,7 +5,6 @@ from typing import Any
 from mydsa.nodes import Node
 
 
-
 class Queue:
     """This data structure is composed of nodes using 
     a first in first out (FIFO) protocol. Think of how 
@@ -17,9 +16,11 @@ class Queue:
         self._tail_node: Node = None
 
     def is_empty(self) -> bool:
+        """Check if queue is empty"""
         return self._head_node == None
 
     def peek(self) -> Any:
+        """return the value of the head node"""
         return self._head_node.value
 
     def enqueue(self, value) -> None:
@@ -37,6 +38,7 @@ class Queue:
             self._tail_node = new_head
 
     def dequeue(self) -> Any:
+        """Return value of the head node and remove from queue"""
         value = self._head_node.value
         self._head_node = self._head_node.next_node
         if self._head_node == None:

@@ -1,4 +1,4 @@
-from nodes import Node
+from mydsa.nodes import Node
 from typing import Any, Optional
 
 class Stack:
@@ -9,6 +9,7 @@ class Stack:
         self._limit = limit
 
     def push(self, value: Any) -> None:
+        """Add value to stack if there's space"""
         if self.has_space():
             item = Node(value)
             item.next_node = self._top_item
