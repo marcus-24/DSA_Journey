@@ -1,3 +1,8 @@
 {
-    "python.pythonPath": "C:\\Users\\Marcus\\anaconda3\\envs\\dsa_env\\python.exe"
+    "python.pythonPath": "C:\\Users\\Marcus\\anaconda3\\envs\\dsa_env\\python.exe",
+    "python.testing.pytestArgs": [
+        "tests"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
 }
